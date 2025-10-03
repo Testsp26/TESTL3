@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <title>KAIZKHOA</title>
+  </head>
+  <body>
+    <!-- overlay -->
+    <section id="overlay"></section>
+    <!-- header -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <!-- logo -->
+          <div class="navbar__logo">
+            <img src="./img/logo.png" alt="website logo" />
+            <div class="nhan-biet">
+              <h1>TRƯỜNG THPT LÝ SƠN</h1>
+              <h2>TỈNH QUẢNG NGÃI</h2>
+            </div>
+          </div>
+          <!-- Menu -->
+          <ul class="navbar__links">
+            <a href="#predict"><button class="navbar__btn">Mô hình</button></a>
+            <a href="#things"
+              ><button class="navbar__btn">Định hướng</button></a
+            >
+            <a href="#news"><button class="navbar__btn">Tin tức</button></a>
+            <a href="#footer"><button class="navbar__btn">Liên hệ</button></a>
+          </ul>
+          <!-- menu button -->
+          <div class="navbar__icons">
+            <div class="navbar__icon"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- banner -->
+    <section id="banner">
+      <div class="container">
+        <!-- img -->
+        <div class="banner__img">
+          <img src="./img/MEO.png" alt="anh bia" />
+        </div>
+        <!-- heading -->
+        <div class="banner__heading">
+          <h1>ĐẢO LÝ SƠN</h1>
+          <p>
+            Lý sơn được biết đến là " Vương quốc tỏi" với đặc sản nổi tiếng đã
+            làm nên thương hiệu trong suốt nhiều năm liền. Nhờ được trồng trên
+            đắt núi lửa kèm trên bề mặt là cát biển đã tạo nên một hương vị đặc
+            trưng vốn có với tép tỏi nhỏ nhưng chứa hương vị thơm nồng, cay nhẹ
+            và đặc biệt có nhiều tác dụng tốt trong y học nên được gọi là "Vàng
+            trắng" ở Lý Sơn
+          </p>
+          <a href="#"><button class="banner__btn">View More</button></a>
+          <div class="banner__socials">
+            <a href="https://m.me/kaizkhoaN" target="_blank"
+              ><i class="fa-brands fa-facebook-messenger"></i
+            ></a>
+            <a href="https://www.facebook.com/kaizkhoaN" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=khoanguyentu90@gmail.com"
+              target="_blank"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr
+      style="
+        border: none;
+        border-top: 5px dashed #09caece7;
+        margin: 20px 0;
+        width: 100%;
+      "
+    />
+    <!-- Dự đoán hình ảnh -->
+    <section id="predict" style="padding: 4em 0; background-color: #f7f9fc">
+      <div class="container">
+        <h2 style="text-align: center; color: #082b8d; margin-bottom: 2em">
+          Tải ảnh lên để dự đoán
+        </h2>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5em;
+          "
+        >
+          <input
+            type="file"
+            id="file"
+            style="padding: 1em; border-radius: 10px; border: 1px solid #ccc"
+          />
+          <div
+            id="preview"
+            style="
+              width: 300px;
+              height: 300px;
+              border: 2px dashed #0645a5;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 10px;
+              overflow: hidden;
+            "
+          >
+            <span style="color: #0645a5">Ảnh xem trước</span>
+          </div>
+          <p id="status" style="color: #0645a5; font-weight: bold">
+            Loading model...
+          </p>
+          <p
+            id="result"
+            style="color: #e41695; font-size: 1.2rem; font-weight: bold"
+          ></p>
+        </div>
+      </div>
+    </section>
+    <hr
+      style="
+        border: none;
+        border-top: 5px dashed #09caece7;
+        margin: 20px 0;
+        width: 100%;
+      "
+    />
+    <!-- things -->
+    <section id="things">
+      <div class="container">
+        <!-- dec -->
+        <div class="things__dec">
+          <img src="./img/MAI.png" alt="illustration of leaf" />
+        </div>
+        <!-- dec -->
+        <div class="things__dec">
+          <img src="./img/DAO.png" alt="illustration of leaf" />
+        </div>
+        <!-- heading -->
+        <h2>ĐỊNH HƯỚNG PHÁT TRIỂN</h2>
+        <!-- item 1 -->
+        <div class="things__item">
+          <!-- img -->
+          <img src="./img/image.jpg" alt="anh1" />
+          <!-- text -->
+          <div class="things__item--heading">
+            <h3>PHÁT TRIỂN NÔNG NGHIỆP XANH</h3>
+            <p>
+              Tập trung vào việc bảo tồn thương hiệu “tỏi Lý Sơn” gắn liền với
+              môi trường bền vững. Khuyến khích áp dụng quy trình canh tác hữu
+              cơ, hạn chế phân bón hóa học và thuốc bảo vệ thực vật, thay thế
+              bằng phân vi sinh và chế phẩm sinh học. Đồng thời, việc quản lý
+              đất cát đặc trưng của đảo cần gắn với tái sử dụng hợp lý nguồn phụ
+              phẩm nông nghiệp, tiết kiệm nước tưới và bảo vệ hệ sinh thái biển
+              ven đảo.
+            </p>
+          </div>
+        </div>
+        <!-- item 2 -->
+        <div class="things__item">
+          <!-- img -->
+          <img
+            src="./img/chuyen-doi-so-trong-nganh-nong-nghiep.jpg"
+            alt="anh2"
+          />
+          <!-- text -->
+          <div class="things__item--heading">
+            <h3>ỨNG DỤNG KĨ THUẬT SỐ</h3>
+            <p>
+              ứng dụng kỹ thuật số trong trồng tỏi ở đảo Lý Sơn nhằm hiện đại
+              hóa quy trình sản xuất, nâng cao năng suất và chất lượng sản phẩm.
+              Người dân có thể áp dụng công nghệ cảm biến để giám sát độ ẩm,
+              dinh dưỡng và điều kiện đất cát, sử dụng hệ thống tưới nhỏ giọt tự
+              động kết nối IoT để tiết kiệm nước và phân bón. Đồng thời, sử đụng
+              các nền tảng dự báo thời tiết nhanh và chính xác.
+            </p>
+          </div>
+        </div>
+        <!-- item 3 -->
+        <div class="things__item">
+          <!-- img -->
+          <img
+            src="./img/muc-tieu-kinh-te-vi-mo-o-cac-nuoc-hien-nay-bao-gom-nhung-gi.jpg"
+            alt="anh3"
+          />
+          <!-- text -->
+          <div class="things__item--heading">
+            <h3>ĐẦU RA BỀN VỮNG</h3>
+            <p>
+              Tập trung vào xây dựng giá thị trường ổn định, gắn sản xuất với
+              thị trường tiêu thụ lâu dài. Cần đẩy mạnh phát triển thương hiệu
+              “tỏi Lý Sơn” với chứng nhận chỉ dẫn địa lý và tiêu chuẩn an toàn.
+              Song song đó, việc đa dạng hóa sản phẩm từ tỏi như tinh dầu, tỏi
+              đen, sản phẩm quà tặng du lịch để nâng cao giá trị kinh tế. Đảm
+              bảo đầu ra ổn định, nâng cao thu nhập cho người dân, vừa giữ vững
+              uy tín đặc sản Lý Sơn trên thị trường trong và ngoài nước.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr
+      style="
+        border: none;
+        border-top: 5px dashed #09ec4de7;
+        margin: 20px 0;
+        width: 100%;
+      "
+    />
+    <div class="carousel">
+      <div class="carousel-track">
+        <!-- List gốc -->
+        <img src="./img/img01.jpg" alt="Ảnh 1" />
+        <img src="./img/img02.jpg" alt="Ảnh 2" />
+        <img src="./img/img03.jpg" alt="Ảnh 3" />
+        <img src="./img/img04.jpg" alt="Ảnh 4" />
+        <img src="./img/img05.jpg" alt="Ảnh 5" />
+        <!-- Copy thêm để liền mạch -->
+        <img src="./img/img01.jpg" alt="Ảnh 1" />
+        <img src="./img/img02.jpg" alt="Ảnh 2" />
+        <img src="./img/img03.jpg" alt="Ảnh 3" />
+        <img src="./img/img04.jpg" alt="Ảnh 4" />
+        <img src="./img/img05.jpg" alt="Ảnh 5" />
+      </div>
+    </div>
+    <hr
+      style="
+        border: none;
+        border-top: 5px dashed #09ec4de7;
+        margin: 20px 0;
+        width: 100%;
+      "
+    />
+    <!-- news -->
+    <section id="news">
+      <div class="container">
+        <h2>Tin tức</h2>
+        <div class="news-grid">
+          <!-- Bài báo 1 -->
+          <a
+            href="https://ipvietnam.gov.vn/phat-trien-chi-dan-ia-ly/-/asset_publisher/SGA9PgvmYtWI/content/bao-ho-chi-dan-ia-ly-ly-son-cho-san-pham-toi"
+            target="_blank"
+            class="news-card"
+          >
+            <img src="./img/01.jpg" alt="Chỉ dẫn địa lý Tỏi Lý Sơn" />
+            <div class="news-content">
+              <h3>Chỉ dẫn địa lý Tỏi Lý Sơn</h3>
+              <p>
+                Chỉ dẫn địa lý Tỏi Lý Sơn đã được Cục Sở hữu trí tuệ (Bộ Khoa
+                học và Công nghệ) cấp giấy chứng nhận cho sản phẩm tỏi Lý Sơn
+                trên thị trường.
+              </p>
+            </div>
+          </a>
+          <!-- Bài báo 2 -->
+          <a
+            href="https://nhathuoclongchau.com.vn/bai-viet/toi-ly-son-co-tac-dung-gi.html"
+            target="_blank"
+            class="news-card"
+          >
+            <img src="./img/03.jpg" alt="Tác dụng của tỏi Lý Sơn" />
+            <div class="news-content">
+              <h3>Tác dụng của tỏi Lý Sơn</h3>
+              <p>
+                Tỏi Lý Sơn được xem là "vua" của các loại tỏi nhờ vào hàm lượng
+                dinh dưỡng cao và nhiều tác dụng trong đời sống...
+              </p>
+            </div>
+          </a>
+          <!-- Bài báo 3 -->
+          <a
+            href="https://nongtin.com/kythuattrongvachamsoctoilyson/"
+            target="_blank"
+            class="news-card"
+          >
+            <img src="./img/04.jpg" alt="Canh tac toi" />
+            <div class="news-content">
+              <h3>Canh tác tỏi Lý Sơn</h3>
+              <p>
+                Phương pháp canh tác tỏi Lý Sơn tận dụng đất đỏ bazan pha cát
+                đặc trưng của đảo, kết hợp với các điều kiện từ môi trường, kinh
+                nghiệm,...
+              </p>
+            </div>
+          </a>
+          <!-- Bài báo 4 -->
+          <a
+            href="https://khuyennong.quangngai.gov.vn/i2356-tim-huong-phat-trien-ben-vung-cho-cay-toi-li-son.aspx"
+            target="_blank"
+            class="news-card"
+          >
+            <img src="./img/02.jpg" alt="phat trien ben vung" />
+            <div class="news-content">
+              <h3>Tìm hướng phát triển bền vững cho cây tỏi lý sơn</h3>
+              <p>
+                Giải pháp đưa thương hiệu của đất đảo vươn xa và bền vũng hơn
+                trong những năm tiếp theo
+              </p>
+            </div>
+          </a>
+          <!-- Video 1 -->
+          <div class="news-card">
+            <iframe
+              width="100%"
+              height="300"
+              src="https://www.youtube.com/embed/8VRkyy78KRg"
+              title="Video 1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div class="news-content">
+              <h3>Video: Phóng sự về mùa tỏi 2025</h3>
+              <p>Niềm vui chồng lẫn nỗi lo về đầu ra của sản phẩm.</p>
+            </div>
+          </div>
+          <!-- Video 2 -->
+          <div class="news-card">
+            <iframe
+              width="100%"
+              height="300"
+              src="https://www.youtube.com/embed/pbTM67lJ2FE"
+              title="Video 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div class="news-content">
+              <h3>Video: Tỏi cô đơn biểu tượng của vùng đất đảo</h3>
+              <p>Khám phá đặc sản nổi tiếng ở vùng đất này.</p>
+            </div>
+          </div>
+          <!-- Video 3 -->
+          <div class="news-card">
+            <iframe
+              width="100%"
+              height="300"
+              src="https://www.youtube.com/embed/yAx4oCZL1pY"
+              title="Video 3"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div class="news-content">
+              <h3>Video: Hành trình OCOP 5 SAO của tỏi Lý Sơn</h3>
+              <p>Câu chuyện về làm tỏi sạch.</p>
+            </div>
+          </div>
+          <!-- Bài báo 8 -->
+          <a
+            href="https://tienphong.vn/toi-ly-son-duoc-mua-nong-dan-chua-kip-vui-da-meo-mat-post1722326.tpo"
+            target="_blank"
+            class="news-card"
+          >
+            <img src="./img/5.jpg" alt="vang trang tren dao" />
+            <div class="news-content">
+              <h3>"Vàng trắng" được mùa nhưng mất giá</h3>
+              <p>
+                Tỏi Lý Sơn được mùa, nông dân chưa kịp vui đã lo về giá thành
+                thị trường...
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer id="footer">
+      <div class="container">
+        <!-- dec -->
+        <div class="footer__dec">
+          <img src="./img/things-dec-r.png" alt="illustration of leaf" />
+        </div>
+        <!-- img -->
+        <!-- heading -->
+        <div class="footer__heading">
+          <h1>THÔNG TIN LIÊN HỆ</h1>
+          <!-- contact -->
+          <div class="footer__contact">
+            <a href="tel:0974993104">
+              <i class="fas fa-phone-alt"></i>
+              <p>0974993104</p>
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=khoanguyentu90@gmail.com"
+              target="_blank"
+            >
+              <i class="fas fa-envelope"></i>
+              <p>khoanguyentu90@gmail.com</p>
+            </a>
+            <a href="https://zalo.me/0974993104" target="_blank">
+              <i class="fa-solid fa-comment"></i>
+              <p>Zalo</p>
+            </a>
+          </div>
+        </div>
+        <img src="./img/SHARE!.png" alt="Bản quyền" class="BANQUYEN" />
+      </div>
+    </footer>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- main js -->
+    <script src="./js/main.js"></script>
+    <hr style="border: none; border-top: 3px solid #f02f6f; margin: 10px 0" />
+    <marquee
+      id="marq"
+      scrollamount="4"
+      direction="left"
+      loop="infinite"
+      scrolldelay="0"
+      behavior="scroll"
+      onmouseover="this.stop()"
+      onmouseout="this.start()"
+    >
+      <span style="color: #b60000; font-size: 18px; font-weight: 500">
+        <div style="display: flex; gap: 200px">
+          <span
+            >➤ Sản phẩm thuộc về chi đoàn 12A2 (thiết kế bởi thợ) - Trường trung
+            học phổ thông Lý Sơn.</span
+          >
+          <span
+            >➤ Sản phẩm chỉ dùng cho mục đích nghiên cứu - Mọi thắc mắc vui lòng
+            để lại phản hồi. Trân trọng !</span
+          >
+        </div>
+      </span>
+    </marquee>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+    <script type="module">
+      import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client/+esm";
+
+      const fileInput = document.getElementById("file");
+      const resultText = document.getElementById("result");
+      const preview = document.getElementById("preview");
+      const statusText = document.getElementById("status"); // Lấy phần tử status
+
+      // Cập nhật trạng thái ban đầu
+      statusText.innerText = "Sẵn sàng tải ảnh lên.";
+
+      fileInput.addEventListener("change", async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        // Hiển thị ảnh xem trước
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          preview.innerHTML = `<img src="${event.target.result}" alt="Ảnh tải lên" style="width:100%;height:100%;object-fit:cover;">`;
+        };
+        reader.readAsDataURL(file);
+
+        resultText.innerText = ""; // Xóa kết quả cũ
+        statusText.innerText = "Đang dự đoán vui lòng chờ..."; // Cập nhật trạng thái
+
+        try {
+          //Gọi Space bằng Gradio SDK
+          const app = await client("khoa21/ML01");
+          const result = await app.predict("/predict", [file]);
+          console.log("📥 Kết quả:", result);
+
+          if (
+            result.data &&
+            result.data.length > 0 &&
+            result.data[0].confidences &&
+            result.data[0].confidences.length > 0
+          ) {
+            // Lấy kết quả có độ tin cậy cao nhất (index 0)
+            const prediction = result.data[0].confidences[0];
+            let label = prediction.label;
+
+            // Chuyển độ tin cậy sang % và làm tròn 2 chữ số thập phân
+            const confidence = (prediction.confidence * 100).toFixed(2);
+
+            // Dịch nhãn
+            switch (label) {
+              case "Tanla":
+                label = "Tỏi Có Dấu Hiệu Bị Tàn lá";
+                break;
+              case "Saubenh":
+                label = "Tỏi Có Dấu Hiệu Bị Sâu bệnh ";
+                break;
+              case "Khoemanh":
+                label = "Tỏi Khỏe Mạnh";
+                break;
+            }
+
+            // Hiển thị kết quả đã định dạng
+            resultText.innerHTML = `<p style="font-size: 1.4rem; color: #1a73e8; margin-bottom: 0.5em;">Kết quả dự đoán:</p>
+               <p style="font-size: 1.5rem; font-weight: bold; color: #e41695; margin-top: 0.2em;margin-bottom: 0.2em;">${label}</p>
+               <p style="font-size: 1.2rem; color: #4CAF50;margin-top: 0.2em;">Xác suất dự đoán: ${confidence}%</p>`;
+
+            statusText.innerText = "Dự đoán hoàn tất.";
+          } else {
+            resultText.innerText = "Không thể tìm thấy kết quả dự đoán.";
+            statusText.innerText = "Hoàn thành với lỗi.";
+          }
+        } catch (error) {
+          console.error("Lỗi khi dự đoán:", error);
+          resultText.innerText =
+            "Đã xảy ra lỗi trong quá trình dự đoán. Vui lòng thử lại.";
+          statusText.innerText = "Hoàn thành với lỗi.";
+        }
+      });
+    </script>
+  </body>
+</html>
