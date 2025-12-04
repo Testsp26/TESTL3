@@ -13,7 +13,7 @@
     />
     <!-- main css -->
     <link rel="stylesheet" href="./CSS/main.css" />
-    <title>KAIZKHOA</title>
+    <title>KHKT 2026</title>
   </head>
   <body>
     <!-- overlay -->
@@ -145,21 +145,19 @@
     <!-- things -->
     <section id="things">
       <div class="container">
-        <!-- dec -->
         <div class="things__dec">
           <img src="./img/MAI.png" alt="illustration of leaf" />
         </div>
-        <!-- dec -->
+
         <div class="things__dec">
           <img src="./img/DAO.png" alt="illustration of leaf" />
         </div>
-        <!-- heading -->
+
         <h2>ĐỊNH HƯỚNG PHÁT TRIỂN</h2>
-        <!-- item 1 -->
+
         <div class="things__item">
-          <!-- img -->
           <img src="./img/image.jpg" alt="anh1" />
-          <!-- text -->
+
           <div class="things__item--heading">
             <h3>PHÁT TRIỂN NÔNG NGHIỆP XANH</h3>
             <p>
@@ -173,14 +171,13 @@
             </p>
           </div>
         </div>
-        <!-- item 2 -->
+
         <div class="things__item">
-          <!-- img -->
           <img
             src="./img/chuyen-doi-so-trong-nganh-nong-nghiep.jpg"
             alt="anh2"
           />
-          <!-- text -->
+
           <div class="things__item--heading">
             <h3>ỨNG DỤNG KĨ THUẬT SỐ</h3>
             <p>
@@ -193,14 +190,12 @@
             </p>
           </div>
         </div>
-        <!-- item 3 -->
+
         <div class="things__item">
-          <!-- img -->
           <img
             src="./img/muc-tieu-kinh-te-vi-mo-o-cac-nuoc-hien-nay-bao-gom-nhung-gi.jpg"
             alt="anh3"
           />
-          <!-- text -->
           <div class="things__item--heading">
             <h3>ĐẦU RA BỀN VỮNG</h3>
             <p>
@@ -226,18 +221,25 @@
     />
     <div class="carousel">
       <div class="carousel-track">
-        <!-- List gốc -->
+        <img src="./img/Img0.jpg" alt="Ảnh 0" />
         <img src="./img/img01.jpg" alt="Ảnh 1" />
         <img src="./img/img02.jpg" alt="Ảnh 2" />
         <img src="./img/img03.jpg" alt="Ảnh 3" />
         <img src="./img/img04.jpg" alt="Ảnh 4" />
         <img src="./img/img05.jpg" alt="Ảnh 5" />
-        <!-- Copy thêm để liền mạch -->
+        <img src="./img/img6.jpg" alt="Ảnh 6" />
+        <img src="./img/img7.jpg" alt="Ảnh 7" />
+        <img src="./img/img8.jpg" alt="Ảnh 8" />
+
+        <img src="./img/Img0.jpg" alt="Ảnh 0" />
         <img src="./img/img01.jpg" alt="Ảnh 1" />
         <img src="./img/img02.jpg" alt="Ảnh 2" />
         <img src="./img/img03.jpg" alt="Ảnh 3" />
         <img src="./img/img04.jpg" alt="Ảnh 4" />
         <img src="./img/img05.jpg" alt="Ảnh 5" />
+        <img src="./img/img6.jpg" alt="Ảnh 6" />
+        <img src="./img/img7.jpg" alt="Ảnh 7" />
+        <img src="./img/img8.jpg" alt="Ảnh 8" />
       </div>
     </div>
     <hr
@@ -253,7 +255,6 @@
       <div class="container">
         <h2>Tin tức</h2>
         <div class="news-grid">
-          <!-- Bài báo 1 -->
           <a
             href="https://ipvietnam.gov.vn/phat-trien-chi-dan-ia-ly/-/asset_publisher/SGA9PgvmYtWI/content/bao-ho-chi-dan-ia-ly-ly-son-cho-san-pham-toi"
             target="_blank"
@@ -269,7 +270,7 @@
               </p>
             </div>
           </a>
-          <!-- Bài báo 2 -->
+
           <a
             href="https://nhathuoclongchau.com.vn/bai-viet/toi-ly-son-co-tac-dung-gi.html"
             target="_blank"
@@ -284,7 +285,7 @@
               </p>
             </div>
           </a>
-          <!-- Bài báo 3 -->
+
           <a
             href="https://nongtin.com/kythuattrongvachamsoctoilyson/"
             target="_blank"
@@ -300,7 +301,7 @@
               </p>
             </div>
           </a>
-          <!-- Bài báo 4 -->
+
           <a
             href="https://khuyennong.quangngai.gov.vn/i2356-tim-huong-phat-trien-ben-vung-cho-cay-toi-li-son.aspx"
             target="_blank"
@@ -411,7 +412,6 @@
             </a>
           </div>
         </div>
-        <img src="./img/SHARE!.png" alt="Bản quyền" class="BANQUYEN" />
       </div>
     </footer>
     <!-- fontawesome -->
@@ -435,8 +435,8 @@
       <span style="color: #b60000; font-size: 18px; font-weight: 500">
         <div style="display: flex; gap: 200px">
           <span
-            >➤ Sản phẩm thuộc về chi đoàn 12A2 (thiết kế bởi thợ) - Trường trung
-            học phổ thông Lý Sơn.</span
+            >➤ Sản phẩm thuộc về chi đoàn 12A2 - Trường trung học phổ thông Lý
+            Sơn.</span
           >
           <span
             >➤ Sản phẩm chỉ dùng cho mục đích nghiên cứu - Mọi thắc mắc vui lòng
@@ -475,7 +475,7 @@
           //Gọi Space bằng Gradio SDK
           const app = await client("khoa21/ML01");
           const result = await app.predict("/predict", [file]);
-          console.log("📥 Kết quả:", result);
+          console.log("Kết quả:", result);
 
           if (
             result.data &&
@@ -493,21 +493,34 @@
             // Dịch nhãn
             switch (label) {
               case "Tanla":
-                label = "Tỏi Có Dấu Hiệu Bị Tàn lá";
+                label = "Tỏi có dấu hiệu bị tàn lá";
                 break;
               case "Saubenh":
-                label = "Tỏi Có Dấu Hiệu Bị Sâu bệnh ";
+                label = "Tỏi có dấu hiệu bị sâu bệnh";
                 break;
               case "Khoemanh":
-                label = "Tỏi Khỏe Mạnh";
+                label = "Tỏi khỏe mạnh";
                 break;
             }
 
             // Hiển thị kết quả đã định dạng
-            resultText.innerHTML = `<p style="font-size: 1.4rem; color: #1a73e8; margin-bottom: 0.5em;">Kết quả dự đoán:</p>
-               <p style="font-size: 1.5rem; font-weight: bold; color: #e41695; margin-top: 0.2em;margin-bottom: 0.2em;">${label}</p>
-               <p style="font-size: 1.2rem; color: #4CAF50;margin-top: 0.2em;">Xác suất dự đoán: ${confidence}%</p>`;
+            resultText.innerHTML = `
+          <table class="result-table">
+          <tr>
+          <th colspan="2" class="result-header">Kết Quả Dự Đoán</th>
+          </tr>
 
+          <tr>
+          <td class="result-title">Tình trạng cây tỏi : </td>
+          <td class="result-label">${label}</td>
+        </tr>
+
+        <tr>
+        <td class="result-title">Xác suất dự đoán : </td>
+        <td class="result-percent">${confidence}%</td>
+        </tr>
+        </table>
+      `;
             statusText.innerText = "Dự đoán hoàn tất.";
           } else {
             resultText.innerText = "Không thể tìm thấy kết quả dự đoán.";
