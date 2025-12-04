@@ -671,3 +671,56 @@ header {
     object-fit: cover;
   }
 }
+.result-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  animation: fadeIn 0.3s ease;
+
+  border: 2px solid #01121f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.result-header {
+  background: #2a7eb6;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 1.25rem;
+}
+
+.result-title {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 600;
+}
+
+.result-label {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #087c44;
+}
+
+.result-percent {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #087c44;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
