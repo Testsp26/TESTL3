@@ -509,9 +509,9 @@ header {
 #news h2 {
   font-size: 3rem;
   color: #b90b23;
-  text-align: center; 
+  text-align: center; /* căn giữa */
   margin-bottom: 2em;
-  margin-top: 2em; 
+  margin-top: 2em; /* khoảng cách dưới */
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -614,7 +614,7 @@ header {
   z-index: -1;
 }
 #footer .BANQUYEN {
-  position: absolute;
+  position: absolute; /* bám vào footer */
   bottom: 20px;
   right: 25px;
   width: 150px;
@@ -631,15 +631,15 @@ header {
   }
 
   .footer__heading {
-    text-align: center; 
+    text-align: center; /* căn chữ vào giữa */
     margin: 0 auto;
   }
   .footer__heading h1 {
-    margin-bottom: 2em; 
+    margin-bottom: 2em; /* tạo khoảng cách với icon phía trên */
   }
   .footer__contact {
     display: flex;
-    justify-content: center; 
+    justify-content: center; /* icon căn giữa */
     gap: 3em; /* khoảng cách đều giữa các icon */
     margin-top: 2em;
   }
