@@ -507,43 +507,94 @@
             const prediction = result.data[0].confidences[0];
             let label = prediction.label;
 
-            // Chuyển độ tin cậy sang % và làm tròn 2 chữ số thập phân
             const confidence = (prediction.confidence * 100).toFixed(2);
 
             // Dịch nhãn
-            switch (label) {
+            let originalLabel = label;
+            let suggestion = "";
+            let link = "";
+
+            // dịch nhãn + đề xuất + link
+            switch (originalLabel) {
               case "Tanla":
                 label = "Tỏi có dấu hiệu bị vàng lá (rầy gây hại)";
+                suggestion =
+                  "Kiểm tra độ ẩm đất, phân bón, thời tiết và các dấu hiệu. Sử dụng phân bón, thuốc đặc trị cho loại bệnh và loại bỏ lá bị nhiễm.";
+                link =
+                  "https://hlc.net.vn/ky-thuat-trong-trot/huong-dan-bien-phap-tri-doi-duc-than-la-tren-cay-hanh-toi-2251-33855-article.html";
+                link =
+                  "https://www.engebiotech.com/vi/news/prevention-and-treatment-of-garlic-green-onion-leek-dry-tip/";
                 break;
+
               case "Saubenh":
                 label = "Tỏi có dấu hiệu bị sâu bệnh tấn công";
+                suggestion =
+                  "Kiểm tra cây trồng thường xuyên, sử dụng thuốc đặc trị cho sâu bệnh.";
+                link = "https://nongnghiepavn.com/quan-ly-sau-hai-hanh-toi/";
+                link =
+                  "https://camnangcaytrong.com/sau-benh-hai-cay-toi-sbc53.html";
                 break;
+
               case "Khoemanh":
                 label = "Tỏi phát triển khỏe mạnh";
+                suggestion =
+                  "Tiếp tục duy trì chế độ chăm sóc, theo dõi độ ẩm và ánh sáng phù hợp.";
+                link = "https://lienhiephoi.quangngai.gov.vn/mnews.aspx?id=506";
+                link = "https://nongtin.com/kythuattrongvachamsoctoilyson/";
                 break;
+
               case "Thieuchat":
                 label = "Tỏi có dấu hiệu thiếu chất dinh dưỡng";
+                suggestion =
+                  "Xác định chất dinh dưỡng bị thiếu cho cây.Bổ sung nước, phân bón giàu chất dinh dưỡng phù hợp.";
+                link =
+                  "https://supelamthao.vn/tin-tuc/298-cac-loai-phan-bon-ly-tuong-cho-cac-giong-toi-khac-nhau-la-gi";
+                link =
+                  "https://halan.net/ky-thuat-trong-va-cham-soc-toi-co-don-ly-son/";
                 break;
             }
 
             // Hiển thị kết quả đã định dạng
+            const userNote = document.getElementById("user-note").value;
+
             resultText.innerHTML = `
-          <table class="result-table">
-          <tr>
-          <th colspan="2" class="result-header">Kết Quả Dự Đoán</th>
-          </tr>
+<table class="result-table">
 
-          <tr>
-          <td class="result-title">Tình trạng cây tỏi : </td>
-          <td class="result-label">${label}</td>
-        </tr>
+<tr>
+<th colspan="2" class="result-header">KẾT QUẢ DỰ ĐOÁN</th>
+</tr>
 
-        <tr>
-        <td class="result-title">Xác suất dự đoán : </td>
-        <td class="result-percent">${confidence}%</td>
-        </tr>
-        </table>
-      `;
+<tr>
+<td class="result-title">Tình trạng cây tỏi:</td>
+<td class="result-label">${label}</td>
+</tr>
+
+<tr>
+<td class="result-title">Độ tin cậy:</td>
+<td class="result-percent">${confidence}%</td>
+</tr>
+
+<tr>
+<td class="result-title">Đề xuất xử lý:</td>
+<td style="color:#333;font-weight:500">
+${suggestion}
+</td>
+</tr>
+
+<tr>
+<td class="result-title">Tài liệu tham khảo:</td>
+<td>
+<a href="${link}" target="_blank"
+style="color:blue;font-weight:bold">
+Xem bài báo hướng dẫn
+</a>
+</td>
+</tr>
+
+
+
+</table>
+`;
             statusText.innerText = "Dự đoán hoàn tất.";
           } else {
             resultText.innerText = "Không thể tìm thấy kết quả dự đoán.";
