@@ -512,7 +512,7 @@
             // Dịch nhãn
             let originalLabel = label;
             let suggestion = "";
-            let link = "";
+            let links = [];
 
             // dịch nhãn + đề xuất + link
             switch (originalLabel) {
@@ -520,43 +520,52 @@
                 label = "Tỏi có dấu hiệu bị vàng lá (rầy gây hại)";
                 suggestion =
                   "Kiểm tra độ ẩm đất, phân bón, thời tiết và các dấu hiệu. Sử dụng phân bón, thuốc đặc trị cho loại bệnh và loại bỏ lá bị nhiễm.";
-                link =
-                  "https://hlc.net.vn/ky-thuat-trong-trot/huong-dan-bien-phap-tri-doi-duc-than-la-tren-cay-hanh-toi-2251-33855-article.html";
-                link =
-                  "https://www.engebiotech.com/vi/news/prevention-and-treatment-of-garlic-green-onion-leek-dry-tip/";
+
+                links = [
+                  "https://hlc.net.vn/ky-thuat-trong-trot/huong-dan-bien-phap-tri-doi-duc-than-la-tren-cay-hanh-toi-2251-33855-article.html",
+                  "https://www.engebiotech.com/vi/news/prevention-and-treatment-of-garlic-green-onion-leek-dry-tip/",
+                ];
                 break;
 
               case "Saubenh":
                 label = "Tỏi có dấu hiệu bị sâu bệnh tấn công";
                 suggestion =
                   "Kiểm tra cây trồng thường xuyên, sử dụng thuốc đặc trị cho sâu bệnh.";
-                link = "https://nongnghiepavn.com/quan-ly-sau-hai-hanh-toi/";
-                link =
-                  "https://camnangcaytrong.com/sau-benh-hai-cay-toi-sbc53.html";
+
+                links = [
+                  "https://nongnghiepavn.com/quan-ly-sau-hai-hanh-toi/",
+                  "https://camnangcaytrong.com/sau-benh-hai-cay-toi-sbc53.html",
+                ];
                 break;
 
               case "Khoemanh":
                 label = "Tỏi phát triển khỏe mạnh";
                 suggestion =
                   "Tiếp tục duy trì chế độ chăm sóc, theo dõi độ ẩm và ánh sáng phù hợp.";
-                link = "https://lienhiephoi.quangngai.gov.vn/mnews.aspx?id=506";
-                link = "https://nongtin.com/kythuattrongvachamsoctoilyson/";
+
+                links = [
+                  "https://lienhiephoi.quangngai.gov.vn/mnews.aspx?id=506",
+                  "https://nongtin.com/kythuattrongvachamsoctoilyson/",
+                ];
                 break;
 
               case "Thieuchat":
                 label = "Tỏi có dấu hiệu thiếu chất dinh dưỡng";
                 suggestion =
-                  "Xác định chất dinh dưỡng bị thiếu cho cây.Bổ sung nước, phân bón giàu chất dinh dưỡng phù hợp.";
-                link =
-                  "https://supelamthao.vn/tin-tuc/298-cac-loai-phan-bon-ly-tuong-cho-cac-giong-toi-khac-nhau-la-gi";
-                link =
-                  "https://halan.net/ky-thuat-trong-va-cham-soc-toi-co-don-ly-son/";
+                  "Xác định chất dinh dưỡng bị thiếu cho cây. Bổ sung nước, phân bón giàu chất dinh dưỡng phù hợp.";
+
+                links = [
+                  "https://supelamthao.vn/tin-tuc/298-cac-loai-phan-bon-ly-tuong-cho-cac-giong-toi-khac-nhau-la-gi",
+                  "https://halan.net/ky-thuat-trong-va-cham-soc-toi-co-don-ly-son/",
+                ];
                 break;
             }
-
-            // Hiển thị kết quả đã định dạng
-            const userNote = document.getElementById("user-note").value;
-
+            const linkHTML = links
+              .map(
+                (l, i) =>
+                  `<a href="${l}" target="_blank">Tài liệu ${i + 1}</a>`,
+              )
+              .join("<br>");
             resultText.innerHTML = `
 <table class="result-table">
 
@@ -583,11 +592,8 @@ ${suggestion}
 
 <tr>
 <td class="result-title">Tài liệu tham khảo:</td>
-<td>
-<a href="${link}" target="_blank"
-style="color:blue;font-weight:bold">
-Xem bài báo hướng dẫn
-</a>
+<td style="color:blue;font-weight:bold">
+${linkHTML}
 </td>
 </tr>
 
